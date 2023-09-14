@@ -9,32 +9,53 @@
     <h1>Regex Assignment</h1>
 
     <script>
-      let stringCa = "cacmarcaderie";
+      let stringCa = "cacmarcarerie";
       const caRegEx = /ca(r|t)/;
       console.log(caRegEx.test(stringCa));
 
-      let stringProp = "preprosition";
+      let stringProp = "pop corn";
       const propRegEx = /pr?op/;
       console.log(propRegEx.test(stringProp));
 
-      let stringFerr = "ferragamo";
+      let stringFerr = "ferryagamo";
       const ferrRegEx = /ferr(et|y|ari)/;
-      console.log(ferrRegEx.test(string));
+      console.log(ferrRegEx.test(stringFerr));
 
       let stringIous = "religious";
       const iousRegEx = /ious$/;
-      console.log(iousRegEx(string));
+      console.log(iousRegEx.test(stringIous));
 
       let stringCharacters = "I am a happy md : Booy.I get doing";
       const charactersRegEx = / (\.|,|:|;)/;
-      console.log(charactersRegEx.test(string));
+      console.log(charactersRegEx.test(stringCharacters));
 
       const stringLength = "happyhou boery";
       const lengthRegEx = /[a-z]{6,}/i;
-      console.log(lengthRegEx.test(string));
+      console.log(lengthRegEx.test(stringLength));
 
-      //   const string = "a quick fox";
-      //   console.log(/[a-d][f-z][^e][a-d][f-z]/.test(string));
+      const string = "a quick fox";
+      console.log(/[a-d][f-z][^e][a-d][f-z]/.test(string));
+
+      //Quotation style
+
+      let stringDailogue =
+        "Cooking isn't just what I do when I'm hungry. It's something I 'love' to do";
+      const dialogueRegEx = /(^|\w)'|'(\w]$)/gi;
+      let output = stringDailogue.replace(dialogueRegEx, '$1"');
+      console.log(output);
+
+      function isValidJavaScriptNumber(input) {
+        const regex = /^[+-]?\d*\.?\d+(?:[eE][+-]?\d+)?$/;
+        return regex.test(input);
+      }
+
+      // Test cases
+      console.log(isValidJavaScriptNumber("789")); // returns true
+      console.log(isValidJavaScriptNumber("-237")); // returns true
+      console.log(isValidJavaScriptNumber("0.127")); // returns true
+      console.log(isValidJavaScriptNumber("4e-2")); // returns true
+      console.log(isValidJavaScriptNumber("7E10")); // returns true
+      console.log(isValidJavaScriptNumber(".9")); // returns true
     </script>
   </body>
 </html>
