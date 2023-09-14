@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegEx Assignment</title>
+  </head>
+  <body>
+    <h1>Regex Assignment</h1>
+
+    <script>
+      let stringCa = "cacmarcaderie";
+      const caRegEx = /ca(r|t)/;
+      console.log(caRegEx.test(stringCa));
+
+      let stringProp = "preprosition";
+      const propRegEx = /pr?op/;
+      console.log(propRegEx.test(stringProp));
+
+      let stringFerr = "ferragamo";
+      const ferrRegEx = /ferr(et|y|ari)/;
+      console.log(ferrRegEx.test(string));
+
+      let stringIous = "religious";
+      const iousRegEx = /ious$/;
+      console.log(iousRegEx(string));
+
+      let stringCharacters = "I am a happy md : Booy.I get doing";
+      const charactersRegEx = / (\.|,|:|;)/;
+      console.log(charactersRegEx.test(string));
+
+      const stringLength = "happyhou boery";
+      const lengthRegEx = /[a-z]{6,}/i;
+      console.log(lengthRegEx.test(string));
+
+      //   const string = "a quick fox";
+      //   console.log(/[a-d][f-z][^e][a-d][f-z]/.test(string));
+    </script>
+  </body>
+</html>
